@@ -1,0 +1,30 @@
+$bc_color: #212121;
+$txt_color: #eee;
+$primary_color: #14FFEC;
+$secondary_color: #0D7377;
+$disabled_color: #323232;
+
+*{
+    box-sizing: border-box;
+    color: $txt_color;
+
+    body{
+        margin: 0;
+        background-color: $bc_color;
+
+        a, a:visited, a:active{
+            color: $txt_color;
+            text-decoration: none;
+        }
+
+        h1, h2, h3, h4, h5, h6, p{
+            margin: 0;
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,98 @@
+@import "../variables.scss";
+
+.projects {
+    & > .content{
+        width: 1200px;
+        margin: 5rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        .plus {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            top: 0;
+            right: -1rem;
+            filter: invert(1);
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: rgba($color: $secondary_color, $alpha: 0.3);
+                border-radius: 50%;
+            }
+        }
+    
+        .card {
+            width: 530px;
+            height: 350px;
+            margin: 1rem 30px;
+            padding: 1rem;
+            border: solid 2px $secondary_color;
+            border-radius: 0.5rem;
+            transition: 0.3s;
+    
+            &.addNew {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: dashed 2px $secondary_color;
+                cursor: pointer;
+                transition: 0.3s;
+            
+                &:hover {
+                    background-color: rgba($color: $secondary_color, $alpha: 0.3);
+                }
+            
+                .plus {
+                    width: 5rem;
+                    height: 5rem;
+                    right: 0;
+                    position: relative;
+
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .modal{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: -130vh;
+        left: 0;
+        background-color: rgba($color: $bc_color, $alpha: 0.9);
+        z-index: 10;
+        transition: 0.3s;
+
+        .content{
+            width: 70vw;
+            padding: 2rem;
+            background-color: $secondary_color;
+            border-radius: 0.5rem;
+        }
+
+        &Open{
+            top: 0;
+        }
+    }
+}
+
+.search{
+    input{
+        margin: 0 2rem;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border: solid 2px $secondary_color;
+        border-radius: 0.5rem;
+    }
+}

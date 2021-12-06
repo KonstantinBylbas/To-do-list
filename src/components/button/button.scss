@@ -1,0 +1,19 @@
+@import '../variables.scss';
+
+button{
+    padding: 0.5rem 1rem;
+    position: relative;
+    background-color: transparent;
+    border: solid 2px $secondary_color;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+        background-color: rgba($color: $primary_color, $alpha: 0.3);
+    }
+
+    &:active{
+        top: 2px;
+    }
+}
